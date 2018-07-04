@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+
+html, body {
+	font-family: 'Raleway', sans-serif;
+	background: #2D7C91;
+	height: 100vh;
+	margin: 0;
+	color: #f9f0f0;
+}
+
+.transferList-page h1 {
+	margin-left: 1.5em;
+}
+
+.transfer-card {
+    margin: 2em 4.5em;
+    border: 1px solid;
+    border-radius: .25em;
+    padding: 1em 2em;
+}
+
+.transfer-card div {
+	margin: 1em;
+}
+
+.transfer-card h4,h5 {
+	display: inline;
+}
+.transfer-card h5 {
+	font-weight: 300;
+}

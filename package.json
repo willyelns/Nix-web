@@ -1,0 +1,23 @@
+{
+  "name": "nix-web",
+  "version": "1.0.0",
+  "description": "Web system to consume REST API simulating a bank system with list of money transfer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willyelns/Nix-web.git"
+  },
+  "author": "Willyelns G. Xavier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willyelns/Nix-web/issues"
+  },
+  "homepage": "https://github.com/willyelns/Nix-web#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "npm": "^6.1.0"
+  }
+}
