@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html ng-app="App">
 <head>
+	<base href="/">
 	<meta charset="UTF-8">
 	<title>NIX - Lista de Transferências</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<div class="transferList-page" ng-controller="TransferListController">
-		
-		<h1>Transferências</h1>
 
-		<div class="transferList-wrap">
-			<div class="transfer-card" ng-repeat="transfer in transferList" ng-click="toDetails(transfer)">
-				<div class="transfer-payer">
-					<h4>Nome Pagador:</h4>
-					<h5>{{ transfer.pagador.nome }}</h5>
+	<header ng-controller="AppController">
+		<nav>
+			<div class="navbar">
+				<div class="navbar-brand">
+					<a href="/home" class="logo">NIX</a>
 				</div>
-				<div class="transfer-recipient">
-					<h4>Nome Beneficiário:</h4>
-					<h5>{{ transfer.beneficiario.nome }}</h5>
+				<div class="navbar-list" ng-if="!login">
+					<ul>
+						<li class="navbar-item" ng-repeat="item in navbarlist">
+							<a href="{{item.link}}" class="navbar-link">{{item.name}}</a>
+						</li>
+					</ul>
 				</div>
-				<div class="transfer-type">
-					<h4>Tipo:</h4>
-					<h5>{{ transfer.tipo }}</h5>
+				<div class="userlogged" ng-if="!login" ng-click="userMenu()">
+					<img src="http://placehold.it/50x50">
+					<div class="userlogged-text">
+						<h6>Nome</h6>
+						<h6>CC 1234-0 AG 789123-5</h6>
+					</div>
+					<div class="userlogged-options">
+						<ul>
+							<li><a href="/transferencias">Transferências</a></li>
+							<li><a href="/login">Sair</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="transfer-status">
-					<h4>Status:</h4>
-					<h5 >{{ transfer.status }}</h5>
-				</div>
-				<div class="transfer-value">
-					<h4>Valor:</h4>
-					<h5>R$ {{ transfer.valor }}</h5>
-				</div>
-			</div>	
-		</div>
+			</div>
+		</nav>
+	</header>
 
-		<h2>Pages: {{ $scope.pages }}</h2>
+	<ng-view></ng-view>
 
-		<div class="graph-bg">
-			<object>
-				<embed src="./assets/images/chart-bg.svg">
-			</object>
-		</div>
-
-	</div>
-	<script src="./assets/scripts//angular.min.js"></script>
-	<script src="modules/app.module.js"></script>
+	<script src="./assets/scripts/angular.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="app/app.controller.js"></script>
 	<script src="services/transfer.factory.js"></script>
+	<script src="pages/home/home.controller.js"></script>
+	<script src="pages/filter/filter.controller.js"></script>
+	<script src="pages/login/login.controller.js"></script>
+	<script src="pages/transfer-details/transfer-details.controller.js"></script>
 	<script src="pages/transfer-list/transfer-list.controller.js"></script>
 </body>
 </html>

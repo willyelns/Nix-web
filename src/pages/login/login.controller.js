@@ -1,4 +1,11 @@
-app.controller('LoginController', function($scope, TransferApi){
+app.controller('LoginController', function($scope, $location){
 
-	$scope.transfer = [];
+	const toHome = ()=>{
+		$location.path( '/home' );
+	}
+
+	$scope.login = ()=>{
+		const loginContainer = angular.element(document.querySelector('.login-container')).addClass('login-actived');
+		setTimeout(toHome(),500);
+	}
 });

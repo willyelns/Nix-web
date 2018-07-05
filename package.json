@@ -19,6 +19,7 @@
   "homepage": "https://github.com/willyelns/Nix-web#readme",
   "dependencies": {
     "angular": "^1.7.2",
+    "angular-route": "^1.7.2",
     "npm": "^6.1.0"
   },
   "devDependencies": {
