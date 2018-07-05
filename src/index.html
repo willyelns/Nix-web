@@ -10,7 +10,7 @@
 	<div class="transferList-page" ng-controller="TransferListController">
 		
 		<h1>Transferências</h1>
-		
+
 		<div class="transferList-wrap">
 			<div class="transfer-card" ng-repeat="transfer in transferList" ng-click="toDetails(transfer)">
 				<div class="transfer-payer">
@@ -34,6 +34,12 @@
 					<h5>{{ transfer.valor }}</h5>
 				</div>
 			</div>	
+		</div>
+
+		<div class="graph-bg">
+			<object data="" type="">
+				<embed src="./assets/images/chart-bg.svg" type="">
+			</object>
 		</div>
 
 	</div>

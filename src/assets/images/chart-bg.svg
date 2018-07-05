@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1940.6 605.49">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 16px;
+        -webkit-animation: dash 2s linear forwards;
+        -o-animation: dash 2s linear forwards;
+        -moz-animation: dash 2s linear forwards;
+        animation: dash 4s linear infinite;
+        stroke-dasharray: 3500;
+        stroke-dashoffset:0;
+      }
+
+      @-webkit-keyframes dash {
+        from {
+          stroke-dashoffset: 3500;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+
+      }
+    </style>
+  </defs>
+  <path id="chart-bg" class="cls-1" d="M13.533,1077.875,117.359,977.621,182.133,847.2l45.74,78.616,14.084,81.561L313.42,878.6l25.09,26.672,74.6-99.365,50.513,119.914,58.374,33.574,73.6-139.3,94.194,224.135L791.8,925.821l81.316,51.8,43.77-99.02L990,977.621,1093.3,820.1,1179,939.568l31.988,89.263,98.578-123.559h107.569l45.906,72.348L1544.525,820.1l62.083,27.106,41.444-64.569h60.411l25.556,13.072,19.941,10.2,31.844-134.717,59.913-57.012,96.408-131.3" transform="translate(-7.976 -478.14)"/>
+</svg>
