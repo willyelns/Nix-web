@@ -4,7 +4,8 @@
   "description": "Web system to consume REST API simulating a bank system with list of money transfer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "lite-server -c ./configs/bs-config.json"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "angular": "^1.7.2",
     "npm": "^6.1.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.4.0"
   }
 }
