@@ -1,4 +1,4 @@
-angular.module('App').controller('TransferDetailsController', function($scope, TransferApi){
+app.controller('TransferDetailsController', function($scope, TransferApi){
 
 	$scope.transfer = [];
 

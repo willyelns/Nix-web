@@ -1,0 +1,36 @@
+<div class="transferList-page" ng-controller="TransferListController">
+		
+    <h1>Transferências</h1>
+
+    <div class="transferList-wrap">
+        <div class="transfer-card" ng-repeat="transfer in transferList" ng-click="toDetails(transfer)">
+            <div class="transfer-payer">
+                <h4>Nome Pagador:</h4>
+                <h5>{{ transfer.pagador.nome }}</h5>
+            </div>
+            <div class="transfer-recipient">
+                <h4>Nome Beneficiário:</h4>
+                <h5>{{ transfer.beneficiario.nome }}</h5>
+            </div>
+            <div class="transfer-type">
+                <h4>Tipo:</h4>
+                <h5>{{ transfer.tipo }}</h5>
+            </div>
+            <div class="transfer-status">
+                <h4>Status:</h4>
+                <h5 >{{ transfer.status }}</h5>
+            </div>
+            <div class="transfer-value">
+                <h4>Valor:</h4>
+                <h5>{{ transfer.valor }}</h5>
+            </div>
+        </div>	
+    </div>
+
+    <div class="graph-bg">
+        <object data="" type="">
+            <embed src="./assets/images/chart-bg.svg" type="">
+        </object>
+    </div>
+
+</div>
