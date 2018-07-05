@@ -10,3 +10,120 @@
 @import "../../pages/transfer-list/transfer-list";
 
 //Common for all App
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600');
+
+html, body {
+	font-family: $font-family;
+	background: $color-primary;
+	height: 100vh;
+	margin: 0;
+	color: $color-text;
+	overflow-x: hidden;
+}
+
+nav {
+	background-color: rgba(0,0,0,.5); width: 100%;
+}
+
+nav .logo {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 3em;
+	padding-left: 1em;
+}
+
+nav .navbar {
+	display: flex;
+	align-items: center;
+}
+
+nav .userlogged {
+	margin-left: auto;
+	display: flex;
+	margin-right: 1.5em;
+	cursor: pointer; 
+}
+nav .userlogged img{
+	border-radius: 50%;
+	margin: auto;
+}
+nav .userlogged .userlogged-text {
+	text-align: center;
+	max-height: 50%;
+	margin: auto;
+}
+
+nav .userlogged .userlogged-text h6 {
+	margin: .5em;
+	font-weight: 300;
+}
+
+nav .userlogged-options {
+	position: absolute;
+	top: 7.3%;
+    background-color: rgba(0,0,0,.5);
+    width:  100%;
+    transform: translateX(1000px);
+}
+
+nav .userlogged-options ul{
+	list-style-type: none;
+}
+
+nav .userlogged-options li {
+	margin: 1em 0;
+}
+
+nav .userlogged-options a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.transferList-page h1 {
+	margin-left: 1.5em;
+}
+
+.transferList-wrap {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.transfer-card {
+    margin: 1em 1.5em;
+    border: 1px solid;
+    border-radius: .25em;
+	padding: 1em 2em;
+	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.transfer-card div {
+	margin: 1em;
+}
+
+.transfer-card h4,h5 {
+	display: inline;
+}
+.transfer-card h5 {
+	font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+	.transferList-wrap {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}	
+
+	.transfer-card {
+		margin: .5em 1.5em;
+		border: 1px solid;
+		border-radius: .25em;
+		padding: 0 2em;
+		-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+				animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	}
+}
+
+
+
