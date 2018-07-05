@@ -1,4 +1,4 @@
-var angular = require('angular');
+// var angular = require('angular');
 (function (){
 	angular.module('App', []);
 })();
