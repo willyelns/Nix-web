@@ -1,8 +1,4 @@
-app.controller('AppController', function($scope, $rootScope){
-
-	$scope.navbarlist = [
-		{'name': 'transferencias', 'link': '/transferencias'},
-	]
+app.controller('AppController', function($scope, $rootScope	){
 
 	$scope.login = true;
 	$scope.transferencias = false;
@@ -38,4 +34,15 @@ app.controller('AppController', function($scope, $rootScope){
  	 }
 
   });
+});
+
+
+app.controller('UserController', function($scope, PersonApi){
+	$scope.user = {}
+
+	PersonApi.list().then((result)=>{
+		$scope.user = result;
+
+		console.log('user', $scope.user);
+	})
 });

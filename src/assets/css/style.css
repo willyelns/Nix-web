@@ -6,6 +6,7 @@ html, body {
 	height: 100vh;
 	margin: 0;
 	color: #f9f0f0;
+	overflow-x: hidden;
 }
 
 nav {
@@ -26,6 +27,7 @@ nav .navbar {
 }
 
 nav .userlogged {
+	margin-left: auto;
 	display: flex;
 	margin-right: 1.5em;
 	cursor: pointer; 
@@ -75,30 +77,6 @@ nav .userlogged-options a {
 	text-decoration: none;
 	color: inherit;
 }
-
-.navbar-list {
-	margin-left: auto;
-	margin-right: .5em;
-}
-
-.navbar-list ul {
-	margin: 0;
-	overflow: hidden;
-}
-
-.navbar-list .navbar-item {
-	list-style: none;
-	float: left;
-	padding: .5em;
-    margin: .5em;
-}
-
-.navbar-list .navbar-link {
-    font-size:  1.5em;
-    color: inherit;
-    text-decoration: none;
-}
-
 
 .transferList-page h1 {
 	margin-left: 1.5em;

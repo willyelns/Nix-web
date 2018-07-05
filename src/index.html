@@ -15,17 +15,10 @@
 				<div class="navbar-brand">
 					<a href="/home" class="logo">NIX</a>
 				</div>
-				<div class="navbar-list" ng-if="!login">
-					<ul>
-						<li class="navbar-item" ng-repeat="item in navbarlist">
-							<a href="{{item.link}}" class="navbar-link">{{item.name}}</a>
-						</li>
-					</ul>
-				</div>
-				<div class="userlogged" ng-if="!login" ng-click="userMenu()">
-					<img src="http://placehold.it/50x50">
+				<div class="userlogged" ng-if="!login" ng-click="userMenu()" ng-controller="UserController">
+					<img src="{{user.thumbnail}}">
 					<div class="userlogged-text">
-						<h6>Nome</h6>
+						<h6>{{user.name}}</h6>
 						<h6>CC 1234-0 AG 789123-5</h6>
 					</div>
 					<div class="userlogged-options">
@@ -46,6 +39,7 @@
 	<script src="app/app.module.js"></script>
 	<script src="app/app.controller.js"></script>
 	<script src="services/transfer.factory.js"></script>
+	<script src="services/person.factory.js"></script>
 	<script src="pages/home/home.controller.js"></script>
 	<script src="pages/filter/filter.controller.js"></script>
 	<script src="pages/login/login.controller.js"></script>

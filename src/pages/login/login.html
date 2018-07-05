@@ -5,10 +5,10 @@
 
 		<div class="login-card">
 			<div class="login-card-inner">
-				<div class="user">
-					<img src="https://placehold.it/150x150" class="img-user">
+				<div class="user" ng-controller="UserController">
+					<img src="{{user.img}}" class="img-user">
 					<div class="name">
-						<h4>Nome Completo</h4>
+						<h4>{{user.name}}</h4>
 					</div>
 					<div class="bank">
 						<h4>CC 1234-0 AG 789123-5</h4>
