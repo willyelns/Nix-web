@@ -27,6 +27,41 @@
         </div>  
     </div>
 
+    <div class="transfer-details">
+        <div class="transfer-payer">
+            <h4>Nome Pagador:</h4>
+            <h5>{{ transferDetail.pagador.nome }}</h5>
+            <h4>Agência:</h4>
+            <h5>{{ transferDetail.pagador.agencia }}</h5>
+            <h4>Conta:</h4>
+            <h5>{{ transferDetail.pagador.conta }}</h5>
+            <h4>Banco:</h4>
+            <h5>{{ transferDetail.pagador.banco }}</h5>
+        </div>
+        <div class="transfer-recipient">
+            <h4>Nome Beneficiário:</h4>
+            <h5>{{ transferDetail.beneficiario.nome }}</h5>
+            <h4>Agência:</h4>
+            <h5>{{ transferDetail.beneficiario.agencia }}</h5>
+            <h4>Conta:</h4>
+            <h5>{{ transferDetail.beneficiario.conta }}</h5>
+            <h4>Banco:</h4>
+            <h5>{{ transferDetail.beneficiario.banco }}</h5>
+        </div>
+        <div class="transfer-type">
+            <h4>Tipo:</h4>
+            <h5>{{ transferDetail.tipo }}</h5>
+        </div>
+        <div class="transfer-status">
+            <h4>Status:</h4>
+            <h5 >{{ transferDetail.status }}</h5>
+        </div>
+        <div class="transfer-value">
+            <h4>Valor:</h4>
+            <h5>R$ {{ transferDetail.valor }}</h5>
+        </div>
+    </div>
+
     <h2>Pages: {{ $scope.pages }}</h2>
 
 </div>

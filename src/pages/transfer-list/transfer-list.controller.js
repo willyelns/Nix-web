@@ -2,6 +2,24 @@ app.controller('TransferListController', function($scope, TransferApi){
 
     $scope.transferList = [];
     $scope.transfers = [];
+    $scope.transferDetail = {
+        'pagador': {
+            'agencia': '',
+            'conta': '',
+            'banco': '',
+            'nome': '',
+        },
+        'beneficiario': {
+            'agencia': '',
+            'conta': '',
+            'banco': '',
+            'nome': ''
+        },
+        status:'',
+        tipo: '',
+        valor:''
+
+    };
     $scope.currentPage = 0;
     $scope.pages = 0;
     $scope.nextText = '';
@@ -10,7 +28,7 @@ app.controller('TransferListController', function($scope, TransferApi){
 
     const loadTransferList = () =>{
         TransferApi.list().then((result) =>{
-            result.data.forEach(item => $scope.transfers.push(item));
+            result.data.forEach(item => $scope.transferList.push(item));
         });
         console.log('test' , $scope.transfers);
     }
