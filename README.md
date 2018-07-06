@@ -49,11 +49,10 @@ $ npm run start
 
 ### Alguns exemplos de telas
 
+![Login](https://raw.githubusercontent.com/willyelns/Nix-web/master/prototipo-info/login.png )
 
 ![Home](https://raw.githubusercontent.com/willyelns/Nix-web/master/prototipo-info/home.png )
 
-![Lista](https://raw.githubusercontent.com/willyelns/Nix-app/master/prototipo-info/transfer-list.png )
-
-![Filtro](https://raw.githubusercontent.com/willyelns/Nix-web/master/prototipo-info/Filtro.png )
+![Lista](https://raw.githubusercontent.com/willyelns/Nix-web/master/prototipo-info/transfer-list-mobile.png )
 
 O arquivo bruto do layout, outras imagens e um vídeo exemplificando o protótipo estão neste [link](https://github.com/willyelns/Nix-web/tree/master/prototipo-info)
