@@ -44,3 +44,16 @@ Para rodar o projeto no browser:
 $ npm run start
 ```
 ---
+
+## Criação e Prototipagem
+
+### Alguns exemplos de telas
+
+
+![Home](https://raw.githubusercontent.com/willyelns/Nix-web/master/prototipo-info/home.png )
+
+![Lista](https://raw.githubusercontent.com/willyelns/Nix-app/master/prototipo-info/transfer-list.png )
+
+![Filtro](https://raw.githubusercontent.com/willyelns/Nix-web/master/prototipo-info/Filtro.png )
+
+O arquivo bruto do layout, outras imagens e um vídeo exemplificando o protótipo estão neste [link](https://github.com/willyelns/Nix-web/tree/master/prototipo-info)
