@@ -1,3 +1,85 @@
-.transfer-details {
-    // margin: 5em;
+.transferList-page {
+
+    h1 {
+        margin-left: 1.5em;
+    }
+    
+    .transferList-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .transfer-card {
+        margin: 1em 1.5em;
+        border: 1px solid;
+        border-radius: .25em;
+        padding: 1em 2em;
+        cursor: pointer;
+        @extend .scale-up-ver-center;
+        transition: transform 200ms;
+        div {
+            margin: 1em;
+        }
+        h4,h5 {
+            display: inline;
+        }
+        h5 {
+            font-weight: 300;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .transfer-details {
+        background-color: $color-secondary;
+        margin: auto;
+        border-radius: .5em;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+        position: absolute;
+        top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        div{
+            margin: .5em 0;
+        }
+
+        h4,h5 {
+            margin: .5em;
+            display: inline;
+        }
+        h5 {
+            @extend .text-thin;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        
+        .transferList-wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .transfer-card {
+            margin: .5em 1.5em;
+            border: 1px solid;
+            border-radius: .25em;
+            padding: 0 2em;
+            -webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                    animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+    }
+    @media screen and (max-width: 425px) {
+        .transferList-wrap {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
 }
+
+
+

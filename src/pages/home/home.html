@@ -1,6 +1,16 @@
-<div class="Home-page">
+<div class="home-page">
 		
-    <h1>Home</h1>
+    <h1>Bem vindo</h1>
+
+
+	<div class="home-card" ng-click="goToTransferList()">
+		<h2>Transferências</h2>
+		<h3>Total transferido: </h3>
+		<h4>R$ {{transfer.value}}</h4>
+		<h3>Transferências totais:</h3>
+		<h4>{{transfer.total}}</h4>
+	</div>
+
 
     <div class="graph-bg">
 		<object>

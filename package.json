@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run serve | npm run watch-css",
     "serve": "lite-server -c ./configs/bs-config.json",
-    "build-css": "./node_modules/node-sass/bin/node-sass ./src/assets/scss/app.scss -o ./src/assets/css && npx ./node_modules/postcss-cli/bin/postcss ./src/assets/css/style.css --use autoprefixer  -d ./src/assets/css",
+    "build-css": "./node_modules/node-sass/bin/node-sass ./src/assets/scss/app.scss -o ./src/assets/css && npx ./node_modules/postcss-cli/bin/postcss ./src/assets/css/app.css --use autoprefixer  -d ./src/assets/css",
     "watch-css": "nodemon -e scss -x 'npm run build-css'"
   },
   "repository": {

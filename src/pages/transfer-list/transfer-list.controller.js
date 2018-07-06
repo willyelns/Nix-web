@@ -52,19 +52,33 @@ app.controller('TransferListController', function($scope, TransferApi){
             item.valor = typeof item.valor === 'string' ? item.valor : TransferApi.moneyFormat(item.valor.toFixed(2));
         });
         $scope.transferList = paginateTransferList(elementsPage, $scope.currentPage);
-        // $scope.transferList = $scope.transfers;
-        console.group();
-        console.log('saiu');
-        console.log('Pages', $scope.pages);
-        console.log('CurrentPage', $scope.currentPage);
-        console.log('NextText', $scope.nextText);
-        console.log('Transfers', $scope.transfers);
-        console.log('TransferList', $scope.transferList);
-        console.groupEnd();
     }
 
     $scope.toDetails = (transfer) =>{
-    	console.log("details", transfer);
+        console.log("details", transfer);
+        $scope.transferDetail.pagador.agencia = transfer.pagador.agencia;
+        $scope.transferDetail.pagador.conta = transfer.pagador.conta;
+        $scope.transferDetail.pagador.banco = transfer.pagador.banco;
+        $scope.transferDetail.pagador.nome = transfer.pagador.nome;
+
+        $scope.transferDetail.beneficiario.agencia = transfer.beneficiario.agencia;
+        $scope.transferDetail.beneficiario.conta = transfer.beneficiario.conta;
+        $scope.transferDetail.beneficiario.banco = transfer.beneficiario.banco;
+        $scope.transferDetail.beneficiario.nome = transfer.beneficiario.nome;
+
+        $scope.transferDetail.status = transfer.status;
+        $scope.transferDetail.tipo = transfer.tipo;
+        $scope.transferDetail.valor = transfer.valor;
+
+        const options = angular.element( document.querySelector( '.transfer-details' ) );
+
+		if(options.hasClass('slide-center-in')) {
+			options.removeClass('slide-center-in');
+			options.addClass('slide-center-out');
+		} else {
+			options.addClass('slide-center-in');
+			options.removeClass('slide-center-out');
+		}		
     }
 
     $scope.ToFilter = () => {
